@@ -3,8 +3,8 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  --clr-light: #f9faf8;
-  --clr-white: #e5e7eb;
+  --clr-white: #f9faf8;
+  --clr-gray: #e5e7eb;
   --clr-dark: #1f2937;
   --clr-blue: #3882f6;
 }
@@ -28,11 +28,37 @@ li {
 /* Styling */
 
 .section {
+  min-height: 400px;
   padding: 2rem 10rem;
+}
+
+.section.section-tight {
+  padding: 2rem 14rem;
+}
+
+.section-gray {
+  background-color: var(--clr-gray);
 }
 
 .section-dark {
   background-color: var(--clr-dark);
+}
+
+.section-text-center {
+  text-align: center;
+}
+
+.section-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* First section */
@@ -41,9 +67,13 @@ li {
   font-size: 1.5rem;
 }
 
+.hero {
+  max-width: 550px;
+}
+
 .hero-main {
   font-size: 3rem;
-  color: var(--clr-light);
+  color: var(--clr-white);
   font-weight: 900;
 }
 
@@ -54,11 +84,11 @@ li {
 .hero-secondary,
 .link {
   font-size: 1.125rem;
-  color: var(--clr-white);
+  color: var(--clr-gray);
 }
 
 .img-placeholder {
-  min-width: 500px;
+  min-width: 600px;
   min-height: 300px;
   background-color: lightblue;
 }
@@ -70,6 +100,11 @@ li {
   border-radius: 0.4rem;
   font-weight: 700;
   display: inline-block;
+  min-width: 8rem;
+}
+
+.btn-sign-up-border {
+  border: 3px solid var(--clr-white);
 }
 
 .nav {
@@ -85,6 +120,7 @@ li {
 
 .intro-main {
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -92,13 +128,54 @@ li {
 
 .product-container {
   display: flex;
-  gap: 3rem;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 .product {
   border: 3px solid var(--clr-blue);
-  width: 200px;
-  height: 200px;
+  width: 225px;
+  height: 225px;
   border-radius: 1.5rem;
+  flex-shrink: 0;
 }
+
+/* Third section */
+.quote {
+  position: relative;
+  font-size: 2.25rem;
+  color: var(--clr-dark);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.quote-author {
+  position: absolute;
+  font-size: 1.125rem;
+  font-weight: 700;
+  right: 0;
+  bottom: -1rem;
+}
+
+/* Fourth section*/
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  background-color: var(--clr-blue);
+  color: var(--clr-gray);
+  padding: 4rem 8rem;
+  font-size: 1.125rem;
+  border-radius: 1rem;
+}
+
+.card-main :first-child {
+  color: var(--clr-white);
+  font-size: 1.5rem;
+}
+
+/* Footer */
