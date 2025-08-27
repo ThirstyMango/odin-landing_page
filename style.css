@@ -121,12 +121,13 @@ header {
 
 .intro-main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 4rem;
 }
 
 .img-main {
-  max-width: 40rem;
+  max-width: 30rem;
   height: auto;
 }
 
@@ -188,6 +189,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
   width: 100%;
   background-color: var(--clr-blue);
